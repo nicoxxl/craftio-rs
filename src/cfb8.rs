@@ -1,7 +1,4 @@
-use aes::{
-    cipher::{consts::U16, generic_array::GenericArray, BlockCipherMut, NewBlockCipher},
-    Aes128,
-};
+use aes::{Aes128, BlockEncrypt, cipher::{consts::U16, generic_array::GenericArray, NewBlockCipher}};
 #[cfg(feature = "backtrace")]
 use std::backtrace::Backtrace;
 use thiserror::Error;
