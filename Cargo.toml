@@ -11,15 +11,15 @@ repository = "https://github.com/Twister915/craftio-rs"
 readme = "README.md"
 
 [dependencies]
-mcproto-rs = { version = "0.2.0", features = ["std"], default-features = false }
-aes = { version = "0.6", optional = true }
-flate2 = { version = "1.0", features = ["zlib"], optional = true }
+mcproto-rs = { git = "https://github.com/nicoxxl/mcproto-rs", features = ["std"], default-features = false }
+aes = { version = "0.7.4", optional = true }
+flate2 = { version = "1.0.20", features = ["zlib"], optional = true }
 
-thiserror = "1.0"
+thiserror = "1.0.25"
 
-futures = { version = "0.3", optional = true }
-async-trait = { version = "0.1", optional = true }
-tokio = { version = "1.0", features = ["net", "io-util"], optional = true }
+futures = { version = "0.3.15", optional = true }
+async-trait = { version = "0.1.50", optional = true }
+tokio = { version = "1.7.0", features = ["net", "io-util"], optional = true }
 
 [features]
 default = [ "compression", "encryption", "tokio-io" ]
